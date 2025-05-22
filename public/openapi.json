@@ -1,0 +1,95 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Luna Aurelia API",
+    "version": "1.0.0",
+    "description": "Automated API assistant for building, deploying, and managing your digital business via GPT."
+  },
+  "servers": [
+    {
+      "url": "https://luna-aurelia-api.vercel.app",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/status": {
+      "get": {
+        "summary": "Check API status",
+        "responses": {
+          "200": {
+            "description": "API is live",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": "online"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/proxy": {
+      "get": {
+        "summary": "Get proxy info (demo)",
+        "responses": {
+          "200": {
+            "description": "Returns simulated proxy data",
+            "content": {
+              "application/json": {
+                "example": {
+                  "proxy": "active",
+                  "ip": "192.168.0.1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blueprint": {
+      "post": {
+        "summary": "Trigger full business blueprint build",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "business_type": {
+                    "type": "string",
+                    "example": "Coaching"
+                  },
+                  "target_audience": {
+                    "type": "string",
+                    "example": "Entrepreneurs"
+                  },
+                  "language": {
+                    "type": "string",
+                    "example": "de"
+                  }
+                },
+                "required": [
+                  "business_type"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Blueprint initiated",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Blueprint for Coaching initiated"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
