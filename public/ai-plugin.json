@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "luna_aurelia",
+  "name_for_human": "Luna Aurelia",
+  "description_for_model": "Access Luna Aurelia's status and proxy data.",
+  "description_for_human": "Check status or get proxy data from Luna Aurelia.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://luna-aurelia-api.vercel.app/openapi.json"
+  },
+  "logo_url": "https://luna-aurelia-api.vercel.app/logo.png",
+  "contact_email": "support@luna-aurelia.ai",
+  "legal_info_url": "https://luna-aurelia-api.vercel.app/legal.html"
+}
