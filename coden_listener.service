@@ -1,0 +1,13 @@
+[Unit]
+Description=Coden AutoGPT Listener Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/path/to/coden_project
+ExecStart=/usr/bin/python3 listener.py
+Restart=on-failure
+User=yourusername
+
+[Install]
+WantedBy=multi-user.target
