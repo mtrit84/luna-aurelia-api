@@ -61,13 +61,16 @@
                 "type": "object",
                 "properties": {
                   "business_type": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Coaching"
                   },
                   "target_audience": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Entrepreneurs"
                   },
                   "language": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "de"
                   }
                 },
                 "required": [
